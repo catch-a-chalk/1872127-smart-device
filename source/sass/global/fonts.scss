@@ -1,10 +1,15 @@
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "";
-
-  font-display: swap;
-  src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+@mixin font-face($family, $url, $weight: 400) {
+  @font-face {
+    font-family: $family;
+    font-style: normal;
+    font-weight: $weight;
+    src: url("#{$url}.woff2") format("woff2");
+    font-display: swap;
+  }
 }
+
+@include font-face("PT Mono", "../fonts/ptmono");
+@include font-face("PT Mono", "../fonts/ptmonobold", 700);
+
+@include font-face("Roboto Condensed", "../fonts/Robotocondensed");
+@include font-face("Roboto Condensed", "../fonts/Robotocondensedbold", 700);
