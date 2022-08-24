@@ -30,7 +30,8 @@
 }
 
 .btn-middle {
-  font-family: "Roboto Condensed", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -39,4 +40,18 @@
   padding: 10px 15px;
   border: 1px solid $tory-blue;
   border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.btn-wide {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 15px 25px;
+  text-transform: uppercase;
 }

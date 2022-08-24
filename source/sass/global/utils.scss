@@ -52,3 +52,19 @@
     display: none;
   }
 }
+
+.for-tablet {
+  display: block;
+
+  @media (max-width: ($vp-768 - 1)) {
+    display: none;
+  }
+}
+
+.for-mobile {
+  display: none;
+
+  @media (max-width: ($vp-768 - 1)) {
+    display: block;
+  }
+}
