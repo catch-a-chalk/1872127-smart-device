@@ -22,8 +22,7 @@
 
   @media (max-width: ($vp-768 - 1)) {
     --bg: var(--mob-bg);
-    // min-height: 500px;
-    // padding: 178px 15px 30px;
+    padding: 40px calc(50vw - 135px) 50px;
   }
 }
 
@@ -79,6 +78,7 @@
     }
 
     @media (max-width: ($vp-768 - 1)) {
+      margin: 0 auto;
       width: 270px;
       font-size: 14px;
       line-height: 17px;

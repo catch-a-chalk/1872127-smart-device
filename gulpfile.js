@@ -5,6 +5,7 @@ import compileStyles from './gulp/compileStyles.mjs';
 import { copy, copyImages, copySvg } from './gulp/copyAssets.mjs';
 import js from './gulp/compileScripts.mjs';
 import { svgo, sprite, createWebp, optimizeImages } from './gulp/optimizeImages.mjs';
+import compilePug from './gulp/compilePug.js';
 
 const server = browserSync.create();
 const streamStyles = () => compileStyles().pipe(server.stream());
