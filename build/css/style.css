@@ -810,10 +810,11 @@ button,
 
 .header {
   background-color: #041827;
-  -webkit-box-shadow: 0px 5px 15px 15px #041827;
-  box-shadow: 0px 5px 15px 15px #041827;
+  -webkit-box-shadow: 0 5px 15px 15px #041827;
+  box-shadow: 0 5px 15px 15px #041827;
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
 
 .header__wrapper nav {
@@ -911,7 +912,6 @@ button,
 
 .main-advantages__list {
   margin: 120px auto;
-  padding: 0;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(595px, 1fr));
@@ -970,6 +970,148 @@ button,
   color: #00b2ff;
   border-color: #00b2ff;
   width: 180px;
+}
+
+.main-goods {
+  background-color: #041827;
+}
+
+.main-goods__wrapper {
+  padding: 70px calc(50vw - 620px) 140px;
+}
+
+.main-goods__wrapper h3 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0 0 50px 0;
+}
+
+.main-goods__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 95px;
+}
+
+.main-goods__item {
+  position: relative;
+}
+
+.main-goods__item h4 {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  width: 170px;
+}
+
+.main-goods__void {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #00b2ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-form {
+  background: -o-linear-gradient(293deg, #026593 50%, #00b2ff 50%);
+  background: linear-gradient(157deg, #026593 50%, #00b2ff 50%);
+}
+
+.main-form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 115px;
+  padding: 170px 0 250px;
+}
+
+.main-form__block h3 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.main-form__block p {
+  display: inherit;
+  font-family: "PT Mono", "Courier", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+}
+
+.main-form__block p:nth-of-type(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.main-form__block p:nth-of-type(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.main-form__block p:nth-of-type(3) {
+  grid-column: 1/-1;
+}
+
+.main-form__block form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+
+.main-form__block input,
+.main-form__block textarea {
+  color: #ffffff;
+  background-color: #019bdf;
+  border: none;
+  border-radius: 3px;
+  font-family: "PT Mono", "Courier", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 15px;
+}
+
+.main-form__btn {
+  color: #ffffff;
+  background-color: #041827;
+  border: none;
+  border-radius: 3px;
+}
+
+.main-form__checkbox small {
+  font-family: "PT Mono", "Courier", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .footer {
@@ -1131,6 +1273,22 @@ button,
     padding: 0 calc(50vw - 335px) 30px;
   }
 
+  .main-goods__wrapper {
+    padding: 60px calc(50vw - 335px) 50px;
+  }
+
+  .main-goods__list {
+    gap: 30px;
+  }
+
+  .main-goods__item img {
+    width: 670px;
+  }
+
+  picture {
+    display: none;
+  }
+
   .footer__wrapper {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -1208,6 +1366,23 @@ button,
 
   .main-about__wrapper picture {
     display: none;
+  }
+
+  .main-goods__wrapper {
+    padding: 50px calc(50vw - 135px) 40px;
+  }
+
+  .main-goods__wrapper h3 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+    margin: 0 0 40px 0;
+  }
+
+  .main-goods__item h4 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
   }
 
   .footer__wrapper {
