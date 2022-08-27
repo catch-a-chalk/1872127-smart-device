@@ -58,9 +58,18 @@
     }
   }
 
-  img {
+  picture {
+    width: 350px;
+    height: 650px;
+    background-color: $color-cerulean;
+
     @media (max-width: ($vp-1024 - 1)) {
       width: 670px;
+      height: 250px;
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      width: 270px;
     }
   }
 }

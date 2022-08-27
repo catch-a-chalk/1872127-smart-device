@@ -70,8 +70,46 @@
   @media (max-width: ($vp-768 - 1)) {
     grid-column: 1 / -1;
     padding: 20px calc(50vw - 135px);
-    border-top: 1px solid rgba(248, 253, 255, 0.7);
-    border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+    border-top: 1px solid $color-default-white;
+    border-bottom: 1px solid $color-default-white;
+  }
+}
+
+.footer__heading {
+  position: relative;
+  padding: 10px 0;
+}
+
+.footer__toggle {
+  display: none;
+
+  @media (max-width: ($vp-768 - 1)) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 2px;
+      background-color: $color-default-white;
+    }
+
+    &--closed::before {
+      transform: rotate(90deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: $color-default-white;
+    }
   }
 }
 

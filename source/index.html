@@ -225,10 +225,13 @@
             </ul>
           </div>
           <div class="footer__links">
-            <h3>Разделы сайта</h3>
-            <a role="button" href="#" class="footer__toggle" aria-label="Развернуть" aria-expanded="false" aria-controls="footer-ref">
-              <span class="visually-hidden">Открыть меню</span>
-            </a>
+            <div class="footer__heading">
+              <h3>Разделы сайта</h3>
+              <!-- Можно добавить класс footer__toggle--closed -->
+              <a role="button" href="#" class="footer__toggle footer__toggle--opened" aria-label="Развернуть" aria-expanded="false" aria-controls="footer-ref">
+                <span class="visually-hidden">Открыть меню</span>
+              </a>
+            </div>
             <ul class="footer__list footer__list--info" id="footer-ref">
               <li class="footer__link"><a href="#">О компании</a></li>
               <li class="footer__link"><a href="#">Комплектующие</a></li>
@@ -240,10 +243,13 @@
             </ul>
           </div>
           <div class="footer__contacts">
-            <h3>Наш офис</h3>
-            <a role="button" href="#" class="footer__toggle" aria-label="Развернуть" aria-expanded="false" aria-controls="footer-office">
-              <span class="visually-hidden">Открыть меню</span>
-            </a>
+            <div class="footer__heading">
+              <h3>Наш офис</h3>
+              <!-- Можно добавить класс footer__toggle--closed -->
+              <a role="button" href="#" class="footer__toggle footer__toggle--opened" aria-label="Развернуть" aria-expanded="false" aria-controls="footer-office">
+                <span class="visually-hidden">Открыть меню</span>
+              </a>
+            </div>
             <ul class="footer__list footer__list--contacts" id="footer-office">
               <li class="footer__item"><p>г. Мытищи, Олимпийский проспект, д.10</p></li>
               <li class="footer__item"><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
@@ -253,94 +259,46 @@
           </div>
         </div>
       </footer>
+      <!-- Можно добавить класс is-active -->
       <div class="modal modal--preload" data-modal="feedback">
         <div class="modal__wrapper">
-          <div class="modal__overlay" data-close-modal></div>
-          <div class="modal__content">
-            <h3>Закажите звонок</h3>
-            <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
-            <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-              <svg width="20" height="20">
-                <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-              </svg>
-            </button>
-          </div>
-          <form action="https://echo.htmlacademy.ru/" method="post">
-            <p>
-              <label class="visually-hidden" for="modal-name">Имя</label>
-              <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required autocomplete="name">
-            </p>
-            <p>
-              <label class="visually-hidden" for="modal-tel">Телефон</label>
-              <input inputmode="decimal" pattern="-?(\d+|\d+.\d+|.\d+)([eE][-+]?\d+)?" type="tel" id="modal-tel" name="modal-tel" placeholder="Телефон" required autocomplete="tel">
-            </p>
-            <p>
-              <label class="visually-hidden" for="modal-text">Ваш вопрос</label>
-              <textarea id="modal-text" placeholder="Ваш вопрос"></textarea>
-            </p>
-            <button class="main-form__btn btn-wide" type="submit">Отправить</button>
-            <div class="main-form__checkbox">
-              <label for="modal-subscribe">
-                <input class="visually-hidden" id="modal-subscribe" checked="checked" type="checkbox" value="checked">
-                <span></span>
-                <small>Я&nbsp;согласен на&nbsp;обработку персональных данных</small>
-              </label>
+          <div class="modal__block">
+            <div class="modal__overlay" data-close-modal></div>
+            <div class="modal__content">
+              <h3>Закажите звонок</h3>
+              <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+              <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+                </svg>
+              </button>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    
-    <!--
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <p>
+                <label class="visually-hidden" for="modal-name">Имя</label>
+                <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required autocomplete="name">
+              </p>
+              <p>
+                <label class="visually-hidden" for="modal-tel">Телефон</label>
+                <input inputmode="decimal" pattern="-?(\d+|\d+.\d+|.\d+)([eE][-+]?\d+)?" type="tel" id="modal-tel" name="modal-tel" placeholder="Телефон" required autocomplete="tel">
+              </p>
+              <p>
+                <label class="visually-hidden" for="modal-text">Ваш вопрос</label>
+                <textarea id="modal-text" placeholder="Ваш вопрос"></textarea>
+              </p>
+              <button class="main-form__btn btn-wide" type="submit">Отправить</button>
+              <div class="main-form__checkbox">
+                <label for="modal-subscribe">
+                  <input class="visually-hidden" id="modal-subscribe" checked="checked" type="checkbox" value="checked">
+                  <span></span>
+                  <small>Я&nbsp;согласен на&nbsp;обработку персональных данных</small>
+                </label>
+              </div>
+            </form>
           </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-
-    Модалки 
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
         </div>
       </div>
     </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  -->
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
