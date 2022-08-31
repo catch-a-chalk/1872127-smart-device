@@ -1,0 +1,17 @@
+- const CONTACTS = [{ href: 'mailto:info@sd.ru', text: 'info@sd.ru', icon: 'letter'},{ href: 'tel:+74950005252', text: '+7 (495) 000 52 52', icon: 'phone'},]
+
+header.header
+  .header__wrapper
+    nav#main-menu.header__nav
+      a
+        svg(width=205, height=56, role="img", aria-labelledby="logo-header-label", aria-description="умные технологии")
+            title#logo-header-label=projectName
+            use(href="img/sprite_auto.svg#logo-full").for-tablet
+            use(href="img/sprite_auto.svg#logo-cut" fill="#00B2FF").for-mobile
+      ul.header__list
+        each contact in CONTACTS
+          li.header__item
+              svg(width='20' height='20' aria-hidden='true' fill='#00B2FF')
+                  use(href=`img/sprite_auto.svg#icon-${contact.icon}`)
+              a(href=contact.href)=contact.text
+      a.header__btn.btn-middle(role='button' href='#' data-open-modal='feedback' aria-label='Заказать звонок' aria-expanded='false' aria-controls='main-menu') Заказать звонок
