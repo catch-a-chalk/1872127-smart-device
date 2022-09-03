@@ -1,0 +1,27 @@
+// Можно добавить класс is-active
+.modal.modal--preload(data-modal='feedback')
+    .modal__wrapper
+    .modal__block
+        .modal__overlay(data-close-modal='')
+        .modal__content
+        h3 Закажите звонок
+        p.modal__description Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+        button.modal__close-btn.btn-reset(type='button' aria-label='Закрыть попап' data-close-modal='')
+            svg(width='20' height='20')
+            use(xlink:href='img/sprite_auto.svg#icon-close')
+        form(action='https://echo.htmlacademy.ru/' method='post')
+        p
+            label.visually-hidden(for='modal-name') Имя
+            input#modal-name(type='text' name='modal-name' placeholder='Имя' required='' autocomplete='name')
+        p
+            label.visually-hidden(for='modal-tel') Телефон
+            input#modal-tel(inputmode='decimal' pattern='-?(\d+|\d+.\d+|.\d+)([eE][-+]?\d+)?' type='tel' name='modal-tel' placeholder='Телефон' required='' autocomplete='tel')
+        p
+            label.visually-hidden(for='modal-text') Ваш вопрос
+            textarea#modal-text(placeholder='Ваш вопрос')
+        button.main-form__btn.btn-wide(type='submit') Отправить
+        .main-form__checkbox
+            label(for='modal-subscribe')
+            input#modal-subscribe.visually-hidden(checked='checked' type='checkbox' value='checked')
+            span
+            small Я согласен на обработку персональных данных

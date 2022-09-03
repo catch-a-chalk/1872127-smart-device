@@ -6,16 +6,16 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-column-gap: 100px;
-  padding: 0 calc(50vw - 620px) 30px;
+  padding: 0 calc(50vw - 610px) 99px;
 
   @media (max-width: ($vp-1024 - 1)) {
     grid-column-gap: 30px;
-    padding: 0 calc(50vw - 335px) 30px;
+    padding: 0 calc(50vw - 340px) 80px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
     grid-column-gap: 0;
-    padding: 0 calc(50vw - 135px) 30px;
+    padding: 0 calc(50vw - 135px) 80px;
   }
 
   & picture {
@@ -30,7 +30,16 @@
     font-weight: 400;
     font-size: 36px;
     line-height: 51px;
-    margin: 0 0 15px 0;
+    margin: 0 0 13px 0;
+
+    @media (max-width: ($vp-1024 - 1)) {
+      margin: 0 0 9px;
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      font-size: 28px;
+      line-height: 39px;
+    }
   }
 
   p {
@@ -38,11 +47,45 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
+    margin-top: 13px;
+    margin-bottom: 22px;
+
+    @media (max-width: ($vp-1024 - 1)) {
+      margin-top: 9px;
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 14px;
+      margin-bottom: 19px;
+    }
   }
+}
+
+.main-about__accordeon--is-disabled p {
+  display: none;
+}
+
+.main-about__accordeon--is-active p {
+  display: block;
 }
 
 .main-about__btn {
   color: $color-deep-sky-blue;
   border-color: $color-deep-sky-blue;
   width: 180px;
+  background-color: transparent;
+  margin-top: 44px;
+  padding: 13px 15px;
+
+  @media (max-width: ($vp-1024 - 1)) {
+    margin-top: 23px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    width: 160px;
+    margin-top: 21px;
+    padding: 9px 15px;
+  }
 }

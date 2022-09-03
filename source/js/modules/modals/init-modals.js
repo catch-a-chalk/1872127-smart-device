@@ -9,9 +9,9 @@ let modals;
 //   modals.open(name);
 // };
 
-// closeCallback() {
+// closeCallback = () => {
 //   openModalInCloseCallback('modal-5');
-// },
+// }
 
 const settings = {
   'default': {

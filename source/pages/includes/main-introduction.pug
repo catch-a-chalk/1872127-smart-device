@@ -1,0 +1,17 @@
+// 1х: 1920px; 2x: 3840px
+section.main-introduction(style='background-image: var(--bg, url(img/main-bg-desktop@1x.jpg));\
+        --double-bg: url(img/main-bg-desktop@2x.jpg);\
+        --tab-bg: url(img/main-bg-tablet@1x.jpg);\
+        --double-tab-bg: url(img/main-bg-desktop@2x.jpg);\
+        --mob-bg: url(img/main-bg-mobile@1x.jpg);\
+        --double-mob-bg: url(img/main-bg-mobile@2.jpg);')
+          .main-introduction__wrapper
+            h1 Печатные платы
+            p
+              | производство и монтаж, поставка комплектующих,
+              br.for-tablet
+              | блоков и модулей
+            a.main-introduction__btn.btn-wide(role='button' href='#' aria-label='Получить бесплатную консультацию' aria-expanded='false')
+              span.for-tablet Получить бесплатную консультацию
+              span.for-mobile Бесплатная консультация
+              

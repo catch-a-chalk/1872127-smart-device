@@ -54,7 +54,7 @@
 }
 
 .for-tablet {
-  display: block;
+  display: inline;
 
   @media (max-width: ($vp-768 - 1)) {
     display: none;

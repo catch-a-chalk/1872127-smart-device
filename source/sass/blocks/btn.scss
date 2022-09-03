@@ -56,4 +56,8 @@
   text-align: center;
   padding: 15px 25px;
   text-transform: uppercase;
+
+  @media (max-width: ($vp-768 - 1)) {
+    padding: 12px 25px;
+  }
 }

@@ -1,0 +1,44 @@
+section.main-goods
+    .main-goods__wrapper
+        h3.for-tablet Smart Device предлагает следующие товары и услуги
+        h3.for-mobile Товары и услуги Smart Device
+        .main-goods__list
+            a.main-goods__item(href='#' aria-label='Подробнее о производстве печатных плат' aria-expanded='false')
+                // 1х: 350px; 2x: 700px
+                picture
+                    source(type='image/webp' media='(max-width: 767px)' srcset='img/service-1-mobile@1x.webp, img/service-1-mobile@2x.webp 2x')
+                    source(type='image/jpg' media='(max-width: 767px)' srcset='img/service-1-mobile@1x.jpg, img/service-1-mobile@2x.jpg 2x')
+                    source(type='image/webp' media='(max-width: 1023px)' srcset='img/service-1-tablet@1x.webp, img/service-1-tablet@2x.webp 2x')
+                    source(type='image/jpg' media='(max-width: 1023px)' srcset='img/service-1-tablet@1x.jpg, img/service-1-tablet@2x.jpg 2x')
+                    source(type='image/webp' srcset='img/service-1-desktop@1x.webp, img/service-1-desktop@2x.webp 2x')
+                    img(src='img/service-1-desktop@1x.jpg' srcset='img/service-1-desktop@2x.jpg 2x' alt='Фоновое изображение платы № 1' width='350' height='650')
+                h4 Производство печатных плат
+                .main-goods__void
+                    svg(width='5' height='10' aria-hidden='true' fill='#00B2FF')
+                        use(href='img/sprite_auto.svg#icon-vector')
+            a.main-goods__item(href='#' aria-label='Подробнее о монтаже печатных плат' aria-expanded='false')
+                // 1х: 350px; 2x: 700px
+                picture
+                    source(type='image/webp' media='(max-width: 767px)' srcset='img/service-2-mobile@1x.webp, img/service-2-mobile@2x.webp 2x')
+                    source(type='image/jpg' media='(max-width: 767px)' srcset='img/service-2-mobile@1x.jpg, img/service-2-mobile@2x.jpg 2x')
+                    source(type='image/webp' media='(max-width: 1023px)' srcset='img/service-2-tablet@1x.webp, img/service-2-tablet@2x.webp 2x')
+                    source(type='image/jpg' media='(max-width: 1023px)' srcset='img/service-2-tablet@1x.jpg, img/service-2-tablet@2x.jpg 2x')
+                    source(type='image/webp' srcset='img/service-2-desktop@1x.webp, img/service-2-desktop@2x.webp 2x')
+                    img(src='img/service-2-desktop@1x.jpg' srcset='img/service-2-desktop@2x.jpg 2x' alt='Фоновое изображение платы № 2' width='350' height='650')
+                h4 Монтаж печатных плат
+                .main-goods__void
+                    svg(width='5' height='10' aria-hidden='true' fill='#00B2FF')
+                        use(href='img/sprite_auto.svg#icon-vector')
+            a.main-goods__item(href='#' aria-label='Подробнее о комплектующих для светотехники' aria-expanded='false')
+                // 1х: 350px; 2x: 700px
+                picture
+                    source(type='image/webp' media='(max-width: 767px)' srcset='img/service-3-mobile@1x.webp, img/service-3-mobile@2x.webp 2x')
+                    source(type='image/jpg' media='(max-width: 767px)' srcset='img/service-3-mobile@1x.jpg, img/service-3-mobile@2x.jpg 2x')
+                    source(type='image/webp' media='(max-width: 1023px)' srcset='img/service-3-tablet@1x.webp, img/service-3-tablet@2x.webp 2x')
+                    source(type='image/jpg' media='(max-width: 1023px)' srcset='img/service-3-tablet@1x.jpg, img/service-3-tablet@2x.jpg 2x')
+                    source(type='image/webp' srcset='img/service-3-desktop@1x.webp, img/service-3-desktop@2x.webp 2x')
+                    img(src='img/service-3-desktop@1x.jpg' srcset='img/service-3-desktop@2x.jpg 2x' alt='Фоновое изображение платы № 3' width='350' height='650')
+                h4 Комплектующие для светотехники
+                .main-goods__void
+                    svg(width='5' height='10' aria-hidden='true' fill='#00B2FF')
+                        use(href='img/sprite_auto.svg#icon-vector')
