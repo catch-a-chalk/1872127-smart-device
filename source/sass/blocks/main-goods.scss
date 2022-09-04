@@ -10,7 +10,7 @@
   }
 
   @media (max-width: ($vp-768 - 1)) {
-    padding: 44px calc(50vw - 135px) 88px;
+    padding: 44px calc(50vw - 135px) 86px;
   }
 
   h3 {
@@ -39,10 +39,12 @@
   @media (max-width: ($vp-1024 - 1)) {
     grid-template-columns: repeat(auto-fit, minmax(670px, 1fr));
     gap: 30px;
+    margin-top: 37px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    margin-top: 29px;
   }
 }
 

@@ -55,6 +55,7 @@
 
 .for-tablet {
   display: inline;
+  word-spacing: -2px;
 
   @media (max-width: ($vp-768 - 1)) {
     display: none;

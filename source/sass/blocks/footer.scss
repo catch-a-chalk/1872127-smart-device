@@ -20,12 +20,12 @@
 
 .footer__wrapper {
   display: grid;
-  grid-template-columns: 375px 2fr 1fr;
+  grid-template-columns: 375px 3fr 2fr;
   justify-content: center;
-  padding: 55px calc(50vw - 620px);
+  padding: 48px calc(50vw - 620px) 48px calc(50vw - 610px);
 
   @media (max-width: ($vp-1024 - 1)) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 4fr;
     padding: 50px calc(50vw - 335px);
   }
 
@@ -36,8 +36,15 @@
 
 .footer__block {
   display: flex;
-  justify-content: space-between;
-  grid-column: 1 / -1;
+  flex-direction: column;
+  justify-content: flex-start;
+  grid-column: 1 / 2;
+
+  @media (max-width: ($vp-1024 - 1)) {
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 1 / -1;
+  }
 
   @media (max-width: ($vp-768 - 1)) {
     flex-direction: column;
@@ -49,19 +56,34 @@
 .footer__logo {
   margin-bottom: 30px;
 
+  @media (max-width: ($vp-1024 - 1)) {
+    margin-bottom: 20px;
+  }
+
   @media (max-width: ($vp-768 - 1)) {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 
 .footer__social {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 0 0 5px;
   padding: 0;
 
+  @media (max-width: ($vp-1024 - 1)) {
+    position: relative;
+    top: 11px;
+    left: 11px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    top: 0;
+    left: 0;
+  }
+
   &-logo {
-    margin: 0 10px;
+    margin: 0 12px;
   }
 }
 
@@ -72,6 +94,19 @@
     padding: 20px calc(50vw - 135px);
     border-top: 1px solid $color-default-white;
     border-bottom: 1px solid $color-default-white;
+  }
+}
+
+.footer__contacts {
+  position: relative;
+  right: 13px;
+
+  @media (max-width: ($vp-1024 - 1)) {
+    right: 22px;
+  }
+
+  @media (max-width: ($vp-768 - 1)) {
+    right: 0;
   }
 }
 
@@ -115,12 +150,13 @@
 
 .footer__list {
   display: grid;
+  margin-top: 10px;
   padding: 0;
+  grid-row-gap: 8px;
 
   &--info {
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 10px;
-    grid-column-gap: 40px;
+    grid-template-columns: repeat(auto-fit, 220px);
+    grid-column-gap: 30px;
 
     @media (max-width: ($vp-1024 - 1)) {
       grid-template-columns: 1fr;
@@ -130,6 +166,6 @@
 
 .footer__item {
   p {
-    margin: 0 0 10px 0;
+    margin: 0;
   }
 }
