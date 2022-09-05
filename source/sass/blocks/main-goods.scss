@@ -3,10 +3,10 @@
 }
 
 .main-goods__wrapper {
-  padding: 66px calc(50vw - 610px) 140px;
+  padding: 66px calc(50vw - 660px) 140px;
 
   @media (max-width: ($vp-1024 - 1)) {
-    padding: 56px calc(50vw - 335px) 75px;
+    padding: 56px calc(50vw - 375px) 75px;
   }
 
   @media (max-width: ($vp-768 - 1)) {

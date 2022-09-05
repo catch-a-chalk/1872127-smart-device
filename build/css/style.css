@@ -631,6 +631,10 @@ button,
   display: none;
 }
 
+.for-responsive {
+  padding: 0 50px;
+}
+
 .container {
   width: 100%;
   max-width: 1920px;
@@ -892,7 +896,7 @@ button,
 }
 
 .header__wrapper {
-  padding: 26px calc(50vw - 550px) 22px calc(50vw - 610px);
+  padding: 26px calc(50vw - 600px) 22px calc(50vw - 660px);
 }
 
 .header__wrapper nav {
@@ -1006,7 +1010,7 @@ button,
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(585px, 1fr));
   gap: 30px;
-  padding: 0 calc(50vw - 610px);
+  padding: 0 calc(50vw - 660px);
 }
 
 .main-advantages__item {
@@ -1048,7 +1052,7 @@ button,
   -ms-grid-columns: auto 1fr;
   grid-template-columns: auto 1fr;
   grid-column-gap: 100px;
-  padding: 0 calc(50vw - 610px) 99px;
+  padding: 0 calc(50vw - 660px) 99px;
 }
 
 .main-about__description h3 {
@@ -1089,7 +1093,7 @@ button,
 }
 
 .main-goods__wrapper {
-  padding: 66px calc(50vw - 610px) 140px;
+  padding: 66px calc(50vw - 660px) 140px;
 }
 
 .main-goods__wrapper h3 {
@@ -1174,7 +1178,7 @@ button,
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   gap: 115px;
-  padding: 166px calc(50vw - 620px) 250px calc(50vw - 650px);
+  padding: 166px calc(50vw - 670px) 250px calc(50vw - 700px);
 }
 
 .main-form__wrapper picture {
@@ -1325,7 +1329,7 @@ form {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 48px calc(50vw - 620px) 48px calc(50vw - 610px);
+  padding: 48px calc(50vw - 670px) 48px calc(50vw - 660px);
 }
 
 .footer__block {
@@ -1414,12 +1418,16 @@ form {
 }
 
 @media (max-width: 1023px) {
+  .for-responsive {
+    padding: 0 30px;
+  }
+
   .container {
     padding: 0 24px;
   }
 
   .header__wrapper {
-    padding: 9px calc(50vw - 305px) 9px calc(50vw - 335px);
+    padding: 9px calc(50vw - 335px) 9px calc(50vw - 365px);
   }
 
   .header__wrapper nav {
@@ -1472,7 +1480,7 @@ form {
   .main-advantages__list {
     margin: 80px auto;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    padding: 0 calc(50vw - 335px);
+    padding: 0 calc(50vw - 365px);
   }
 
   .main-advantages__item {
@@ -1492,7 +1500,7 @@ form {
 
   .main-about__wrapper {
     grid-column-gap: 30px;
-    padding: 0 calc(50vw - 340px) 80px;
+    padding: 0 calc(50vw - 370px) 80px;
   }
 
   .main-about__description h3 {
@@ -1508,7 +1516,7 @@ form {
   }
 
   .main-goods__wrapper {
-    padding: 56px calc(50vw - 335px) 75px;
+    padding: 56px calc(50vw - 375px) 75px;
   }
 
   .main-goods__list {
@@ -1529,7 +1537,7 @@ form {
 
   .main-form__wrapper {
     display: inherit;
-    padding: 45px calc(50vw - 334px) 124px;
+    padding: 45px calc(50vw - 364px) 124px;
   }
 
   .main-form__wrapper picture {
@@ -1554,7 +1562,7 @@ form {
   .footer__wrapper {
     -ms-grid-columns: 5fr 4fr;
     grid-template-columns: 5fr 4fr;
-    padding: 50px calc(50vw - 335px);
+    padding: 50px calc(50vw - 365px);
   }
 
   .footer__block {
@@ -1595,6 +1603,10 @@ form {
 
   .for-mobile {
     display: block;
+  }
+
+  .for-responsive {
+    padding: 0;
   }
 
   .container {

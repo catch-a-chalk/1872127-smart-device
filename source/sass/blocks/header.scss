@@ -7,10 +7,10 @@
 }
 
 .header__wrapper {
-  padding: 26px calc(50vw - 550px) 22px calc(50vw - 610px);
+  padding: 26px calc(50vw - 600px) 22px calc(50vw - 660px);
 
   @media (max-width: ($vp-1024 - 1)) {
-    padding: 9px calc(50vw - 305px) 9px calc(50vw - 335px);
+    padding: 9px calc(50vw - 335px) 9px calc(50vw - 365px);
   }
 
   @media (max-width: ($vp-768 - 1)) {

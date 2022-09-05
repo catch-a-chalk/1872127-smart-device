@@ -22,11 +22,11 @@
   display: grid;
   grid-template-columns: 375px 3fr 2fr;
   justify-content: center;
-  padding: 48px calc(50vw - 620px) 48px calc(50vw - 610px);
+  padding: 48px calc(50vw - 670px) 48px calc(50vw - 660px);
 
   @media (max-width: ($vp-1024 - 1)) {
     grid-template-columns: 5fr 4fr;
-    padding: 50px calc(50vw - 335px);
+    padding: 50px calc(50vw - 365px);
   }
 
   @media (max-width: ($vp-768 - 1)) {

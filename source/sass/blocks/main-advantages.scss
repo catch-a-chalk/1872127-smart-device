@@ -8,12 +8,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(585px, 1fr));
   gap: 30px;
-  padding: 0 calc(50vw - 610px);
+  padding: 0 calc(50vw - 660px);
 
   @media (max-width: ($vp-1024 - 1)) {
     margin: 80px auto;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    padding: 0 calc(50vw - 335px);
+    padding: 0 calc(50vw - 365px);
   }
 
   @media (max-width: ($vp-768 - 1)) {

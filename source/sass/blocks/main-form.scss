@@ -28,11 +28,11 @@
   display: flex;
   justify-content: space-evenly;
   gap: 115px;
-  padding: 166px calc(50vw - 620px) 250px calc(50vw - 650px);
+  padding: 166px calc(50vw - 670px) 250px calc(50vw - 700px);
 
   @media (max-width: ($vp-1024 - 1)) {
     display: inherit;
-    padding: 45px calc(50vw - 334px) 124px;
+    padding: 45px calc(50vw - 364px) 124px;
 
     picture {
       display: none;
