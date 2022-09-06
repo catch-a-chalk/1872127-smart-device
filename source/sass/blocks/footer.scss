@@ -1,4 +1,5 @@
 .footer {
+  color: $color-tory-blue;
   background-color: $color-black-pearl;
 
   h3 {
@@ -15,6 +16,10 @@
     font-family: $ff-ptmono;
     font-size: 16px;
     line-height: 22px;
+  }
+
+  a {
+    color: $color-tory-blue;
   }
 }
 
@@ -89,6 +94,7 @@
 
 .footer__links,
 .footer__contacts {
+
   @media (max-width: ($vp-768 - 1)) {
     grid-column: 1 / -1;
     padding: 20px calc(50vw - 135px);

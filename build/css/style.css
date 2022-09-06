@@ -436,7 +436,7 @@ html {
   font-size: 16px;
   line-height: 24px;
   font-family: "Placeholder", "Arial", sans-serif;
-  color: #f2f5f6;
+  color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -447,10 +447,11 @@ body {
   height: 100%;
   background-color: #ffffff;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
-  color: #f2f5f6;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -667,6 +668,7 @@ button,
 }
 
 .btn-middle {
+  color: #f2f5f6;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -686,6 +688,7 @@ button,
 }
 
 .btn-wide {
+  color: #f2f5f6;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -704,6 +707,7 @@ button,
 }
 
 .modal {
+  color: #f2f5f6;
   position: fixed;
   top: 0;
   right: 0;
@@ -740,7 +744,8 @@ button,
 }
 
 .modal__wrapper {
-  position: relative;
+  position: fixed;
+  inset: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -767,6 +772,7 @@ button,
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
   cursor: pointer;
 }
 
@@ -775,7 +781,12 @@ button,
   background-color: #00b2ff;
   border-radius: 3px;
   padding: 40px;
-  position: relative;
+  position: fixed;
+  inset: 146px 16px auto 0;
+  margin: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .modal__content {
@@ -797,6 +808,10 @@ button,
   margin-bottom: 40px;
 }
 
+.modal__description {
+  margin-top: 0;
+}
+
 .modal form {
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
@@ -809,7 +824,25 @@ button,
 
 .modal form button {
   width: 100%;
-  margin: 15px 0;
+  margin: 4px 0 5px;
+}
+
+.modal form input,
+.modal form textarea {
+  color: #ffffff;
+  background-color: #019bdf;
+  border: none;
+  border-radius: 3px;
+  font-family: "PT Mono", "Courier", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 15px;
+}
+
+.modal form textarea {
+  height: 155px;
+  padding-top: 23px;
 }
 
 .modal__close-btn {
@@ -823,8 +856,8 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 15px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -841,7 +874,7 @@ button,
 .modal__close-btn::after {
   content: "";
   position: absolute;
-  width: 20px;
+  width: 27px;
   height: 2px;
   background-color: #ffffff;
 }
@@ -886,7 +919,77 @@ button,
   pointer-events: auto;
 }
 
+.modal__form-btn {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #041827;
+  border: none;
+  border-radius: 3px;
+  padding: 13px 25px;
+}
+
+.modal__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  margin-left: 9px;
+}
+
+.modal__checkbox label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.modal__checkbox input[type=checkbox] + span {
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+  border: 1px solid #ffffff;
+  border-radius: 1px;
+}
+
+.modal__checkbox input[type=checkbox] + span:hover,
+.modal__checkbox input[type=checkbox] + span:focus,
+.modal__checkbox input[type=checkbox] + span:focus-within {
+  outline: 2px solid #ffffff;
+  outline-offset: 0.3em;
+}
+
+.modal__checkbox input[type=checkbox]:checked + span {
+  content: url("../img/svg/icon-tick.svg");
+}
+
+.modal__checkbox input[type=checkbox]:focus + span {
+  outline: 2px solid #ffffff;
+  outline-offset: 0.3em;
+}
+
+.modal__checkbox input[type=checkbox]:disabled + span,
+.modal__checkbox input[type=checkbox]:disabled ~ small {
+  opacity: 0.5;
+}
+
+.modal__checkbox small {
+  font-family: "PT Mono", "Courier", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 .header {
+  color: #f2f5f6;
   background-color: #041827;
   -webkit-box-shadow: 0 5px 15px 15px #041827;
   box-shadow: 0 5px 15px 15px #041827;
@@ -945,6 +1048,7 @@ button,
 }
 
 .header__item a {
+  color: #f2f5f6;
   margin-left: 15px;
 }
 
@@ -953,6 +1057,7 @@ button,
 }
 
 .main-introduction {
+  color: #f2f5f6;
   min-height: 882px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1016,8 +1121,22 @@ button,
 .main-advantages__item {
   min-height: 300px;
   border: 1px solid #ebebeb;
-  border-left: 5px solid #00b2ff;
   padding: 35px 45px 35px 40px;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(99%, transparent), color-stop(0%, #00b2ff));
+  background-image: -o-linear-gradient(right, transparent 99%, #00b2ff 0%);
+  background-image: linear-gradient(270deg, transparent 99%, #00b2ff 0%);
+  -webkit-transition-property: background-color, -webkit-box-shadow;
+  transition-property: background-color, -webkit-box-shadow;
+  -o-transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
 
 .main-advantages__item svg {
@@ -1040,6 +1159,19 @@ button,
   font-size: 16px;
   line-height: 22px;
   margin-top: 13px;
+}
+
+.main-advantages__item:hover {
+  background: #00b2ff;
+}
+
+.main-advantages__item:hover h3,
+.main-advantages__item:hover p {
+  color: #f2f5f6;
+}
+
+.main-advantages__item:hover svg {
+  fill: #f2f5f6;
 }
 
 .main-about {
@@ -1089,6 +1221,7 @@ button,
 }
 
 .main-goods {
+  color: #f2f5f6;
   background-color: #041827;
 }
 
@@ -1120,6 +1253,7 @@ button,
 }
 
 .main-goods__item h4 {
+  color: #f2f5f6;
   position: absolute;
   top: 20px;
   left: 40px;
@@ -1127,6 +1261,13 @@ button,
   font-size: 20px;
   line-height: 30px;
   width: 170px;
+}
+
+.main-goods__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .main-goods__void {
@@ -1148,6 +1289,7 @@ button,
 }
 
 .main-form {
+  color: #f2f5f6;
   background: -o-linear-gradient(293deg, #026593 50%, #00b2ff 50%);
   background: linear-gradient(157deg, #026593 50%, #00b2ff 50%);
 }
@@ -1302,6 +1444,7 @@ form {
 }
 
 .footer {
+  color: #f2f5f6;
   background-color: #041827;
 }
 
@@ -1319,6 +1462,10 @@ form {
   font-family: "PT Mono", "Courier", monospace;
   font-size: 16px;
   line-height: 22px;
+}
+
+.footer a {
+  color: #f2f5f6;
 }
 
 .footer__wrapper {
@@ -1424,6 +1571,11 @@ form {
 
   .container {
     padding: 0 24px;
+  }
+
+  .modal__checkbox {
+    margin-left: 0;
+    margin-bottom: 5px;
   }
 
   .header__wrapper {
@@ -1624,6 +1776,10 @@ form {
   .modal__content {
     width: 100%;
     padding: 20px;
+  }
+
+  .modal form textarea {
+    height: 180px;
   }
 
   .modal--fit-content .modal__content {

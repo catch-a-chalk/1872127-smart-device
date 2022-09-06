@@ -26,8 +26,12 @@
 .main-advantages__item {
   min-height: 300px;
   border: 1px solid $color-whisper;
-  border-left: 5px solid $color-deep-sky-blue;
   padding: 35px 45px 35px 40px;
+  overflow: hidden;
+  background-image: linear-gradient(270deg, transparent 99%, $color-deep-sky-blue 0%);
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
 
   @media (max-width: ($vp-1024 - 1)) {
     min-height: 360px;
@@ -81,6 +85,19 @@
 
     @media (max-width: ($vp-768 - 1)) {
       font-size: 14px;
+    }
+  }
+
+  &:hover {
+    background: $color-deep-sky-blue;
+
+    h3,
+    p {
+      color: $color-tory-blue;
+    }
+
+    svg {
+      fill: $color-tory-blue;
     }
   }
 }

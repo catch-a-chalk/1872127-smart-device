@@ -1,4 +1,5 @@
 .header {
+  color: $color-tory-blue;
   background-color: $color-black-pearl;
   box-shadow: 0 5px 15px 15px $color-black-pearl;
   position: fixed;
@@ -69,6 +70,7 @@
   display: flex;
 
   a {
+    color: $color-tory-blue;
     margin-left: 15px;
 
     @media (max-width: ($vp-1024 - 1)) {
