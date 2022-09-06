@@ -47,7 +47,7 @@
 }
 
 .header__list {
-  min-width: 465px;
+  min-width: 485px;
   display: inherit;
   flex-wrap: inherit;
   justify-content: space-between;
@@ -60,7 +60,7 @@
   padding: 0;
 
   @media (max-width: ($vp-1024 - 1)) {
-    min-width: 80px;
+    min-width: 90px;
     margin: 0;
   }
 }
@@ -68,6 +68,7 @@
 .header__item {
   cursor: pointer;
   display: flex;
+  margin: 0 10px;
 
   a {
     color: $color-tory-blue;
