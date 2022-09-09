@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -437,6 +439,7 @@ html {
   line-height: 24px;
   font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -447,7 +450,6 @@ body {
   height: 100%;
   background-color: #ffffff;
   font-family: "Roboto Condensed", "Arial", sans-serif;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -1188,6 +1190,10 @@ button,
   padding: 0 calc(50vw - 660px) 99px;
 }
 
+.main-about__description {
+  position: relative;
+}
+
 .main-about__description h3 {
   font-weight: 400;
   font-size: 36px;
@@ -1204,21 +1210,34 @@ button,
   margin-bottom: 22px;
 }
 
-.main-about__accordeon--is-disabled p {
+.main-about__trigger {
+  list-style: none;
+}
+
+.main-about__trigger::-webkit-details-marker {
   display: none;
 }
 
-.main-about__accordeon--is-active p {
-  display: block;
+.main-about__trigger::after {
+  content: "Подробнее";
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  width: 180px;
+  color: #00b2ff;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #00b2ff;
+  border-radius: 3px;
+  padding: 13px 15px;
 }
 
-.main-about__btn {
-  color: #00b2ff;
-  border-color: #00b2ff;
-  width: 180px;
-  background-color: transparent;
-  margin-top: 44px;
-  padding: 13px 15px;
+details[open] .main-about__trigger::after {
+  content: "Свернуть";
+  bottom: -50px;
 }
 
 .main-goods {
@@ -1449,6 +1468,26 @@ form {
   background-color: #041827;
 }
 
+.footer__trigger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.footer__trigger--blocked {
+  border-bottom: none;
+}
+
+.footer__trigger--blocked::after {
+  display: none;
+}
+
 .footer h3 {
   font-weight: 400;
   font-size: 15px;
@@ -1514,14 +1553,9 @@ form {
   margin: 0 12px;
 }
 
-.footer__contacts {
+.footer__accordion:nth-last-of-type {
   position: relative;
   right: 13px;
-}
-
-.footer__heading {
-  position: relative;
-  padding: 10px 0;
 }
 
 .footer__toggle {
@@ -1664,8 +1698,8 @@ form {
     margin-top: 9px;
   }
 
-  .main-about__btn {
-    margin-top: 23px;
+  .main-about__trigger::after {
+    bottom: -50px;
   }
 
   .main-goods__wrapper {
@@ -1739,7 +1773,7 @@ form {
     left: 11px;
   }
 
-  .footer__contacts {
+  .footer__accordion:nth-last-of-type {
     right: 22px;
   }
 
@@ -1788,7 +1822,7 @@ form {
   }
 
   .header__wrapper {
-    padding: 8px calc(50vw - 115px) 8px calc(50vw - 135px);
+    padding: 8px 25px;
   }
 
   .header__logo svg {
@@ -1829,7 +1863,7 @@ form {
   .main-advantages__list {
     margin: 50px auto 17px;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    padding: 0 calc(50vw - 135px) 30px;
+    padding: 0 25px 30px;
   }
 
   .main-advantages__item {
@@ -1852,7 +1886,7 @@ form {
 
   .main-about__wrapper {
     grid-column-gap: 0;
-    padding: 0 calc(50vw - 135px) 80px;
+    padding: 0 25px 80px;
   }
 
   .main-about__wrapper picture {
@@ -1871,14 +1905,13 @@ form {
     margin-bottom: 19px;
   }
 
-  .main-about__btn {
+  .main-about__trigger::after {
     width: 160px;
-    margin-top: 21px;
     padding: 9px 15px;
   }
 
   .main-goods__wrapper {
-    padding: 44px calc(50vw - 135px) 86px;
+    padding: 44px 25px 86px;
   }
 
   .main-goods__wrapper h3 {
@@ -1916,7 +1949,7 @@ form {
   }
 
   .main-form__wrapper {
-    padding: 46px calc(50vw - 135px) 90px;
+    padding: 46px 25px 90px;
   }
 
   .main-form__block h3 {
@@ -1943,6 +1976,10 @@ form {
     margin: 5px 0 0 5px;
   }
 
+  .footer__trigger {
+    padding: 20px 25px 15px;
+  }
+
   .footer__wrapper {
     padding: 35px 0;
   }
@@ -1955,7 +1992,6 @@ form {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 25px;
   }
 
   .footer__logo {
@@ -1963,20 +1999,64 @@ form {
   }
 
   .footer__social {
+    margin-bottom: 25px;
     top: 0;
     left: 0;
   }
 
-  .footer__links,
-  .footer__contacts {
+  .footer__accordion {
+    width: 100%;
     grid-column: 1/-1;
-    padding: 20px calc(50vw - 135px);
+    padding: 0;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
+    min-height: 60px;
+    overflow: hidden;
+    -webkit-transition: height 0.4s;
+    -o-transition: height 0.4s;
+    transition: height 0.4s;
   }
 
-  .footer__contacts {
+  .footer__accordion[open] {
+    height: inherit;
+  }
+
+  .footer__accordion > .footer__trigger::after,
+  .footer__accordion > .footer__trigger::before {
+    content: "";
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
     right: 0;
+    width: 17px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 25px;
+  }
+
+  .footer__accordion > .footer__trigger::before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .footer__accordion[open] > .footer__trigger::before {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  .footer__accordion:nth-last-of-type {
+    right: 0;
+    position: relative;
+    top: -1px;
   }
 
   .footer__toggle {
@@ -2014,6 +2094,11 @@ form {
   .footer__toggle:active::before,
   .footer__toggle:active::after {
     background-color: #ffffff;
+  }
+
+  .footer__list {
+    padding: 0 25px;
+    margin-top: 0;
   }
 }
 

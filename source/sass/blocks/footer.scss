@@ -2,6 +2,25 @@
   color: $color-tory-blue;
   background-color: $color-black-pearl;
 
+  &__trigger {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+
+    &--blocked {
+      border-bottom: none;
+      &::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: ($vp-768 - 1)) {
+      padding: 20px 25px 15px;
+    }
+  }
+
   h3 {
     font-weight: 400;
     font-size: 15px;
@@ -54,7 +73,6 @@
   @media (max-width: ($vp-768 - 1)) {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 25px;
   }
 }
 
@@ -83,6 +101,7 @@
   }
 
   @media (max-width: ($vp-768 - 1)) {
+    margin-bottom: 25px;
     top: 0;
     left: 0;
   }
@@ -92,18 +111,49 @@
   }
 }
 
-.footer__links,
-.footer__contacts {
-
+.footer__accordion {
   @media (max-width: ($vp-768 - 1)) {
+    width: 100%;
     grid-column: 1 / -1;
-    padding: 20px calc(50vw - 135px);
+    padding: 0;
     border-top: 1px solid $color-default-white;
     border-bottom: 1px solid $color-default-white;
+
+    min-height: 60px;
+    overflow: hidden;
+    transition: height 0.4s;
+
+    &[open] {
+      height: inherit;
+    }
+
+    & > .footer__trigger::after,
+    & > .footer__trigger::before {
+      content: "";
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 0;
+      right: 0;
+      width: 17px;
+      height: 2px;
+      background-color: $color-default-white;
+      margin: 25px;
+    }
+
+    & > .footer__trigger::before {
+      transform: rotate(90deg);
+    }
+
+    &[open] > .footer__trigger::before {
+      transform: rotate(0deg);
+    }
   }
 }
 
-.footer__contacts {
+.footer__accordion:nth-last-of-type {
   position: relative;
   right: 13px;
 
@@ -113,12 +163,9 @@
 
   @media (max-width: ($vp-768 - 1)) {
     right: 0;
+    position: relative;
+    top: -1px;
   }
-}
-
-.footer__heading {
-  position: relative;
-  padding: 10px 0;
 }
 
 .footer__toggle {
@@ -159,6 +206,11 @@
   margin-top: 10px;
   padding: 0;
   grid-row-gap: 8px;
+
+  @media (max-width: ($vp-768 - 1)) {
+    padding: 0 25px;
+    margin-top: 0;
+  }
 
   &--info {
     grid-template-columns: repeat(auto-fit, 220px);

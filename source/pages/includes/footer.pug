@@ -21,13 +21,10 @@ footer.footer.for-responsive
 						svg.footer__social-logo(width='30' height='30' role='img' aria-label='logo-vk' fill='#F8FDFF')
 							title#logo-vk Логотип VK
 							use(href='img/sprite_auto.svg#logo-vk')
-		.footer__links
-			.footer__heading
-				h3 Разделы сайта
-				// Можно добавить класс footer__toggle--closed
-				a.footer__toggle.footer__toggle--opened(role='button' href='#' aria-label='Развернуть' aria-expanded='false' aria-controls='footer-ref')
-					span.visually-hidden Открыть меню
-			ul#footer-ref.footer__list.footer__list--info
+		details(open).footer__accordion
+			summary.footer__trigger Разделы сайта
+			// Можно добавить класс footer__toggle--closed
+			ul.footer__list.footer__list--info
 				li.footer__link
 					a(href='#') О компании
 				li.footer__link
@@ -42,13 +39,10 @@ footer.footer.for-responsive
 					a(href='#') Контакты
 				li.footer__link
 					a(href='#') Монтаж печатных плат
-		.footer__contacts
-			.footer__heading
-				h3 Наш офис
-				// Можно добавить класс footer__toggle--closed
-				a.footer__toggle.footer__toggle--opened(role='button' href='#' aria-label='Развернуть' aria-expanded='false' aria-controls='footer-office')
-					span.visually-hidden Открыть меню
-			ul#footer-office.footer__list.footer__list--contacts
+		details(open).footer__accordion
+			summary.footer__trigger Наш офис
+			// Можно добавить класс footer__toggle--closed
+			ul.footer__list.footer__list--contacts
 				li.footer__item
 					p г. Мытищи, Олимпийский проспект, д.10
 				li.footer__item

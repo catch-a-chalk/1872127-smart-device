@@ -15,7 +15,7 @@
 
   @media (max-width: ($vp-768 - 1)) {
     grid-column-gap: 0;
-    padding: 0 calc(50vw - 135px) 80px;
+    padding: 0 25px 80px;
   }
 
   & picture {
@@ -26,6 +26,8 @@
 }
 
 .main-about__description {
+  position: relative;
+
   h3 {
     font-weight: 400;
     font-size: 36px;
@@ -63,29 +65,42 @@
   }
 }
 
-.main-about__accordeon--is-disabled p {
-  display: none;
+.main-about__trigger {
+  list-style: none;
+  
+
+  &::-webkit-details-marker {
+    display: none
+  }
 }
 
-.main-about__accordeon--is-active p {
-  display: block;
-}
-
-.main-about__btn {
-  color: $color-deep-sky-blue;
-  border-color: $color-deep-sky-blue;
+.main-about__trigger::after {
+  content: 'Подробнее';
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
   width: 180px;
+  color: $color-deep-sky-blue;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
   background-color: transparent;
-  margin-top: 44px;
+  border: 1px solid $color-deep-sky-blue;
+  border-radius: 3px;
   padding: 13px 15px;
 
   @media (max-width: ($vp-1024 - 1)) {
-    margin-top: 23px;
+    bottom: -50px
   }
 
   @media (max-width: ($vp-768 - 1)) {
     width: 160px;
-    margin-top: 21px;
     padding: 9px 15px;
   }
+}
+
+details[open] .main-about__trigger::after {
+  content: 'Свернуть';
+  bottom: -50px;
 }
