@@ -669,26 +669,7 @@ button,
   pointer-events: none;
 }
 
-.btn-middle {
-  color: #f2f5f6;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 5%;
-  padding: 10px 15px;
-  border: 1px solid #f2f5f6;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-
+.btn-middle,
 .btn-wide {
   color: #f2f5f6;
   cursor: pointer;
@@ -700,12 +681,48 @@ button,
   justify-content: center;
   font-style: normal;
   font-weight: 700;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-middle:disabled,
+.btn-wide:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-middle:hover,
+.btn-middle:focus,
+.btn-middle:focus-within,
+.btn-wide:hover,
+.btn-wide:focus,
+.btn-wide:focus-within {
+  outline: 2px solid #026593;
+  outline-offset: 0.3em;
+}
+
+.btn-middle {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 5%;
+  padding: 10px 15px;
+  border: 1px solid #f2f5f6;
+  border-radius: 3px;
+}
+
+.btn-middle:focus {
+  outline: 1px solid #f2f5f6;
+}
+
+.btn-wide {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 1px;
   text-align: center;
   padding: 15px 25px;
-  text-transform: uppercase;
 }
 
 .modal {
@@ -1235,6 +1252,13 @@ button,
   padding: 13px 15px;
 }
 
+.main-about__trigger::after:hover,
+.main-about__trigger::after:focus,
+.main-about__trigger::after:focus-within {
+  outline: 2px solid #026593;
+  outline-offset: 0.3em;
+}
+
 details[open] .main-about__trigger::after {
   content: "Свернуть";
   bottom: -50px;
@@ -1549,8 +1573,26 @@ form {
   padding: 0;
 }
 
-.footer__social-logo {
+.footer__social-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 0 12px;
+}
+
+.footer__social-item a {
+  display: inherit;
+}
+
+.footer__social-item a:hover,
+.footer__social-item a:focus,
+.footer__social-item a:focus-within {
+  outline: 2px solid #026593;
+  outline-offset: 0.3em;
+  border-radius: 50%;
 }
 
 .footer__accordion:nth-last-of-type {

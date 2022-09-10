@@ -67,7 +67,6 @@
 
 .main-about__trigger {
   list-style: none;
-  
 
   &::-webkit-details-marker {
     display: none
@@ -89,6 +88,13 @@
   border: 1px solid $color-deep-sky-blue;
   border-radius: 3px;
   padding: 13px 15px;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    outline: 2px solid $color-cerulean;
+    outline-offset: 0.3em;
+  }
 
   @media (max-width: ($vp-1024 - 1)) {
     bottom: -50px

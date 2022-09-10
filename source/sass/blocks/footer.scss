@@ -105,9 +105,22 @@
     top: 0;
     left: 0;
   }
+}
 
-  &-logo {
-    margin: 0 12px;
+.footer__social-item {
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
+
+  a {
+    display: inherit;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      outline: 2px solid $color-cerulean;
+      outline-offset: 0.3em;
+      border-radius: 50%;
+    }
   }
 }
 

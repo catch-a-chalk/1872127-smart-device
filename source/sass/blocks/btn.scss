@@ -29,22 +29,7 @@
   }
 }
 
-.btn-middle {
-  color: $color-tory-blue;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 5%;
-  padding: 10px 15px;
-  border: 1px solid $color-tory-blue;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-
+.btn-middle,
 .btn-wide {
   color: $color-tory-blue;
   cursor: pointer;
@@ -52,12 +37,41 @@
   justify-content: center;
   font-style: normal;
   font-weight: 700;
+  text-transform: uppercase;
+  user-select: none;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    outline: 2px solid $color-cerulean;
+    outline-offset: 0.3em;
+  }
+}
+
+.btn-middle {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 5%;
+  padding: 10px 15px;
+  border: 1px solid $color-tory-blue;
+  border-radius: 3px;
+
+  &:focus {
+    outline: 1px solid $color-tory-blue;
+  }
+}
+
+.btn-wide {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 1px;
   text-align: center;
   padding: 15px 25px;
-  text-transform: uppercase;
 
   @media (max-width: ($vp-768 - 1)) {
     padding: 12px 25px;
