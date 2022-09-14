@@ -938,6 +938,26 @@ button,
   pointer-events: auto;
 }
 
+.modal::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.modal::-moz-placeholder {
+  color: #ffffff;
+}
+
+.modal:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.modal::placeholder {
+  color: #ffffff;
+}
+
 .modal__form-btn {
   font-size: 16px;
   line-height: 18px;
@@ -1530,6 +1550,26 @@ form {
 
 .footer a {
   color: #f2f5f6;
+}
+
+.footer::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.footer::-moz-placeholder {
+  color: #ffffff;
+}
+
+.footer:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.footer::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.footer::placeholder {
+  color: #ffffff;
 }
 
 .footer__wrapper {

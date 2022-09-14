@@ -153,7 +153,7 @@ form {
     align-items: center;
   }
 
-  input[type="checkbox"] + span {
+  input[type="checkbox"]+span {
     width: 15px;
     height: 15px;
     margin-right: 9px;
@@ -168,17 +168,17 @@ form {
     }
   }
 
-  input[type="checkbox"]:checked + span {
+  input[type="checkbox"]:checked+span {
     content: url("../img/svg/icon-tick.svg");
   }
 
-  input[type="checkbox"]:focus + span {
+  input[type="checkbox"]:focus+span {
     outline: 2px solid $color-default-white;
     outline-offset: 0.3em;
   }
 
-  input[type="checkbox"]:disabled + span,
-  input[type="checkbox"]:disabled ~ small {
+  input[type="checkbox"]:disabled+span,
+  input[type="checkbox"]:disabled~small {
     opacity: 0.5;
   }
 

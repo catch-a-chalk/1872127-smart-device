@@ -11,6 +11,7 @@
 
     &--blocked {
       border-bottom: none;
+
       &::after {
         display: none;
       }
@@ -39,6 +40,10 @@
 
   a {
     color: $color-tory-blue;
+  }
+
+  &::placeholder {
+    color: $color-default-white;
   }
 }
 
@@ -114,6 +119,7 @@
 
   a {
     display: inherit;
+
     &:hover,
     &:focus,
     &:focus-within {
@@ -140,8 +146,8 @@
       height: inherit;
     }
 
-    & > .footer__trigger::after,
-    & > .footer__trigger::before {
+    &>.footer__trigger::after,
+    &>.footer__trigger::before {
       content: "";
       justify-content: center;
       align-items: center;
@@ -156,11 +162,11 @@
       margin: 25px;
     }
 
-    & > .footer__trigger::before {
+    &>.footer__trigger::before {
       transform: rotate(90deg);
     }
 
-    &[open] > .footer__trigger::before {
+    &[open]>.footer__trigger::before {
       transform: rotate(0deg);
     }
   }
