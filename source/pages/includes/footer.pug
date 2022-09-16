@@ -1,53 +1,53 @@
 footer.footer.for-responsive
-	.footer__wrapper
-		.footer__block
-			.footer__logo
-				svg(width=205, height=56, role="img", aria-labelledby="logo-footer-label", aria-description="умные технологии")
-					title#logo-footer-label=projectName
-					use(href="img/sprite_auto.svg#logo-full")
-			ul.footer__social
-				li.footer__social-item
-					a(href='#')
-						svg.footer__social-logo(width='31' height='31' role='img' aria-label='logo-pinterest' fill='#F8FDFF')
-							title#logo-pinterest Логотип Pinterest
-							use(href='img/sprite_auto.svg#logo-pinterest')
-				li.footer__social-item
-					a(href='#')
-						svg.footer__social-logo(width='31' height='31' role='img' aria-label='logo-ok' fill='#F8FDFF')
-							title#logo-ok Логотип OK
-							use(href='img/sprite_auto.svg#logo-ok')
-				li.footer__social-item
-					a(href='#')
-						svg.footer__social-logo(width='31' height='31' role='img' aria-label='logo-vk' fill='#F8FDFF')
-							title#logo-vk Логотип VK
-							use(href='img/sprite_auto.svg#logo-vk')
-		details(open).footer__accordion
-			summary.footer__trigger Разделы сайта
-			// Можно добавить класс footer__toggle--closed
-			ul.footer__list.footer__list--info
-				li.footer__link
-					a(href='#') О компании
-				li.footer__link
-					a(href='#') Комплектующие
-				li.footer__link
-					a(href='#') Продукты
-				li.footer__link
-					a(href='#') Доставка
-				li.footer__link
-					a(href='#') Производство печатных плат
-				li.footer__link
-					a(href='#') Контакты
-				li.footer__link
-					a(href='#') Монтаж печатных плат
-		details(open).footer__accordion
-			summary.footer__trigger Наш офис
-			// Можно добавить класс footer__toggle--closed
-			ul.footer__list.footer__list--contacts
-				li.footer__item
-					p г. Мытищи, Олимпийский проспект, д.10
-				li.footer__item
-					a(href='tel:+74955894050') +7 (495) 589-40-50
-				li.footer__item
-					a(href='tel:+79253895829') +7 (925) 389-58-29
-				li.footer__item
-					a(href='tel:+79253647813') +7 (925) 364-78-13
+  .footer__wrapper
+    .footer__block
+      .footer__logo
+        svg(width='205' height='56' role='img' aria-labelledby='logo-footer-label' aria-description='умные технологии')
+          title#logo-footer-label Smart Devices
+          use(href='img/sprite_auto.svg#logo-full')
+      ul.footer__social
+        li.footer__social-item
+          a(href='#')
+            svg.footer__social-logo(width='31' height='31' role='img' aria-label='logo-pinterest' fill='#F8FDFF')
+              title#logo-pinterest Логотип Pinterest
+              use(href='img/sprite_auto.svg#logo-pinterest')
+        li.footer__social-item
+          a(href='#')
+            svg.footer__social-logo(width='31' height='31' role='img' aria-label='logo-ok' fill='#F8FDFF')
+              title#logo-ok Логотип OK
+              use(href='img/sprite_auto.svg#logo-ok')
+        li.footer__social-item
+          a(href='#')
+            svg.footer__social-logo(width='31' height='31' role='img' aria-label='logo-vk' fill='#F8FDFF')
+              title#logo-vk Логотип VK
+              use(href='img/sprite_auto.svg#logo-vk')
+    details.footer__accordion(open='')
+      summary.footer__trigger Разделы сайта
+      // Можно добавить класс footer__toggle--closed
+      ul.footer__list.footer__list--info
+        li.footer__link
+          a(href='#') О компании
+        li.footer__link
+          a(href='#') Комплектующие
+        li.footer__link
+          a(href='#') Продукты
+        li.footer__link
+          a(href='#') Доставка
+        li.footer__link
+          a(href='#') Производство печатных плат
+        li.footer__link
+          a(href='#') Контакты
+        li.footer__link
+          a(href='#') Монтаж печатных плат
+    details.footer__accordion(open='')
+      summary.footer__trigger Наш офис
+      // Можно добавить класс footer__toggle--closed
+      ul.footer__list.footer__list--contacts
+        li.footer__item
+          p г. Мытищи, Олимпийский проспект, д.10
+        li.footer__item
+          a(href='tel:+74955894050') +7 (495) 589-40-50
+        li.footer__item
+          a(href='tel:+79253895829') +7 (925) 389-58-29
+        li.footer__item
+          a(href='tel:+79253647813') +7 (925) 364-78-13

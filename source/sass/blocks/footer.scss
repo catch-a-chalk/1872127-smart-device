@@ -146,14 +146,12 @@
       height: inherit;
     }
 
-    &>.footer__trigger::after,
-    &>.footer__trigger::before {
+    & > .footer__trigger::after,
+    & > .footer__trigger::before {
       content: "";
       justify-content: center;
       align-items: center;
       position: absolute;
-      width: 30px;
-      height: 30px;
       top: 0;
       right: 0;
       width: 17px;
@@ -162,11 +160,11 @@
       margin: 25px;
     }
 
-    &>.footer__trigger::before {
+    & > .footer__trigger::before {
       transform: rotate(90deg);
     }
 
-    &[open]>.footer__trigger::before {
+    &[open] > .footer__trigger::before {
       transform: rotate(0deg);
     }
   }

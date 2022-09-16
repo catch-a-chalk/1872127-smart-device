@@ -1371,6 +1371,31 @@ details[open] .main-about__trigger::after {
   padding: 15px;
 }
 
+.main-form input::-webkit-input-placeholder,
+.main-form textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.main-form input::-moz-placeholder,
+.main-form textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.main-form input:-ms-input-placeholder,
+.main-form textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.main-form input::-ms-input-placeholder,
+.main-form textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.main-form input::placeholder,
+.main-form textarea::placeholder {
+  color: #ffffff;
+}
+
 .main-form textarea {
   height: 155px;
   padding-top: 23px;
@@ -1912,6 +1937,10 @@ form {
     height: 35px;
   }
 
+  .header__list {
+    margin-right: 15px;
+  }
+
   .main-introduction {
     --bg: var(--mob-bg);
     min-height: 560px;
@@ -1968,7 +1997,7 @@ form {
 
   .main-about__wrapper {
     grid-column-gap: 0;
-    padding: 0 25px 80px;
+    padding: 0 25px 129px;
   }
 
   .main-about__wrapper picture {
@@ -1984,7 +2013,7 @@ form {
     font-size: 14px;
     line-height: 18px;
     margin-top: 14px;
-    margin-bottom: 19px;
+    margin-bottom: 12px;
   }
 
   .main-about__trigger::after {
@@ -2113,8 +2142,6 @@ form {
     -ms-flex-align: center;
     align-items: center;
     position: absolute;
-    width: 30px;
-    height: 30px;
     top: 0;
     right: 0;
     width: 17px;

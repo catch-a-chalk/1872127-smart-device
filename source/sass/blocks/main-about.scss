@@ -15,7 +15,7 @@
 
   @media (max-width: ($vp-768 - 1)) {
     grid-column-gap: 0;
-    padding: 0 25px 80px;
+    padding: 0 25px 129px;
   }
 
   & picture {
@@ -60,7 +60,7 @@
       font-size: 14px;
       line-height: 18px;
       margin-top: 14px;
-      margin-bottom: 19px;
+      margin-bottom: 12px;
     }
   }
 }
@@ -69,12 +69,12 @@
   list-style: none;
 
   &::-webkit-details-marker {
-    display: none
+    display: none;
   }
 }
 
 .main-about__trigger::after {
-  content: 'Подробнее';
+  content: "Подробнее";
   cursor: pointer;
   position: absolute;
   bottom: 20px;
@@ -97,7 +97,7 @@
   }
 
   @media (max-width: ($vp-1024 - 1)) {
-    bottom: -50px
+    bottom: -50px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
@@ -107,6 +107,6 @@
 }
 
 details[open] .main-about__trigger::after {
-  content: 'Свернуть';
+  content: "Свернуть";
   bottom: -50px;
 }

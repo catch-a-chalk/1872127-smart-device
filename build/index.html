@@ -35,7 +35,7 @@
                   <use href="img/sprite_auto.svg#icon-phone"></use>
                 </svg><a href="tel:+74950005252">+7 (495) 000 52 52</a>
               </li>
-            </ul><a class="header__btn btn-middle" role="button" href="#" data-open-modal="feedback" aria-label="Заказать звонок" aria-expanded="false" aria-controls="main-menu">Заказать звонок</a>
+            </ul><a class="header__btn btn-middle" role="button" href="#" data-open-modal="feedback">Заказать звонок</a>
           </nav>
         </div>
       </header>
@@ -54,7 +54,7 @@
                 <svg class="main-advantages__icon" width="35" height="35" role="img" aria-hidden="true" fill="#00B2FF">
                   <use href="img/sprite_auto.svg#icon-stopwatch"></use>
                 </svg>
-                <h3>Оперативные сроки </h3>
+                <h3>Оперативные сроки</h3>
                 <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки.</p>
               </li>
               <li class="main-advantages__item">
@@ -106,7 +106,7 @@
           <div class="main-goods__wrapper">
             <h3 class="for-tablet">Smart Device предлагает следующие товары и услуги</h3>
             <h3 class="for-mobile">Товары и услуги Smart Device</h3>
-            <div class="main-goods__list"><a class="main-goods__item" href="#" aria-label="Подробнее о производстве печатных плат" aria-expanded="false">
+            <div class="main-goods__list"><a class="main-goods__item" href="#" aria-label="Подробнее о производстве печатных плат">
                 <!-- 1х: 350px; 2x: 700px-->
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/service-1-mobile@1x.webp, img/service-1-mobile@2x.webp 2x">
@@ -120,7 +120,7 @@
                   <svg width="5" height="10" aria-hidden="true" fill="#00B2FF">
                     <use href="img/sprite_auto.svg#icon-vector"></use>
                   </svg>
-                </div></a><a class="main-goods__item" href="#" aria-label="Подробнее о монтаже печатных плат" aria-expanded="false">
+                </div></a><a class="main-goods__item" href="#" aria-label="Подробнее о монтаже печатных плат">
                 <!-- 1х: 350px; 2x: 700px-->
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/service-2-mobile@1x.webp, img/service-2-mobile@2x.webp 2x">
@@ -134,7 +134,7 @@
                   <svg width="5" height="10" aria-hidden="true" fill="#00B2FF">
                     <use href="img/sprite_auto.svg#icon-vector"></use>
                   </svg>
-                </div></a><a class="main-goods__item" href="#" aria-label="Подробнее о комплектующих для светотехники" aria-expanded="false">
+                </div></a><a class="main-goods__item" href="#" aria-label="Подробнее о комплектующих для светотехники">
                 <!-- 1х: 350px; 2x: 700px-->
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/service-3-mobile@1x.webp, img/service-3-mobile@2x.webp 2x">
@@ -167,7 +167,7 @@
                 </p>
                 <p>
                   <label class="visually-hidden" for="form-tel">Телефон</label>
-                  <input id="form-tel" inputmode="decimal" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" name="form-tel" placeholder="Телефон" required="" autocomplete="tel">
+                  <input class="phone" id="form-tel" inputmode="decimal" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" name="form-tel" placeholder="Телефон" required="" autocomplete="tel">
                 </p>
                 <p>
                   <label class="visually-hidden" for="form-text">Ваш вопрос</label>
@@ -176,7 +176,7 @@
                 <button class="main-form__btn btn-wide" type="submit">Задать вопрос</button>
                 <div class="main-form__checkbox">
                   <label for="form-subscribe">
-                    <input class="visually-hidden" id="form-subscribe" checked="checked" type="checkbox" value="checked"><span></span><small>Я согласен на обработку<br>персональных данных</small>
+                    <input class="visually-hidden" id="form-subscribe" checked="checked" type="checkbox" value="checked" required=""><span></span><small>Я согласен на обработку<br>персональных данных</small>
                   </label>
                 </div>
               </form>
@@ -211,7 +211,7 @@
                   </svg></a></li>
             </ul>
           </div>
-          <details class="footer__accordion" open>
+          <details class="footer__accordion" open="">
             <summary class="footer__trigger">Разделы сайта</summary>
             <!-- Можно добавить класс footer__toggle--closed-->
             <ul class="footer__list footer__list--info">
@@ -224,7 +224,7 @@
               <li class="footer__link"><a href="#">Монтаж печатных плат</a></li>
             </ul>
           </details>
-          <details class="footer__accordion" open>
+          <details class="footer__accordion" open="">
             <summary class="footer__trigger">Наш офис</summary>
             <!-- Можно добавить класс footer__toggle--closed-->
             <ul class="footer__list footer__list--contacts">
@@ -255,11 +255,11 @@
           <form action="https://echo.htmlacademy.ru/" method="post">
             <p>
               <label class="visually-hidden" for="modal-name">Имя</label>
-              <input id="modal-name" type="text" name="modal-name" placeholder="Имя" required="" autocomplete="name">
+              <input id="modal-name" type="text" name="modal-name" placeholder="Имя" required="" autocomplete="name" autofocus="">
             </p>
             <p>
               <label class="visually-hidden" for="modal-tel">Телефон</label>
-              <input id="modal-tel" inputmode="decimal" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" name="modal-tel" placeholder="Телефон" required="" autocomplete="tel">
+              <input class="phone" id="modal-tel" inputmode="decimal" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" name="modal-tel" placeholder="Телефон" required="" autocomplete="tel">
             </p>
             <p>
               <label class="visually-hidden" for="modal-text">Ваш вопрос</label>

@@ -1,13 +1,12 @@
-const accordions = document.querySelectorAll(".footer__accordion");
-const accordionTriggers = document.querySelectorAll(".footer__trigger");
+const accordions = document.querySelectorAll('.footer__accordion');
 
-const mobileQuery = "(max-width: 767px)";
+const mobileQuery = '(max-width: 767px)';
 const mobileMedia = window.matchMedia(mobileQuery);
 
 /* Проверяем мобильный квери */
 
 updateMatches();
-mobileMedia.addEventListener("change", updateMatches);
+mobileMedia.addEventListener('change', updateMatches);
 
 function updateMatches() {
   if (mobileMedia.matches) {
@@ -17,7 +16,7 @@ function updateMatches() {
       accordion.open = false;
       /* Востанавливем функционал, если он был отменён */
       const summary = accordion.firstElementChild;
-      summary.removeEventListener("click", cancelEvent);
+      summary.removeEventListener('click', cancelEvent);
     });
   } else {
     accordions.forEach((accordion) => {
@@ -26,7 +25,7 @@ function updateMatches() {
       accordion.open = true;
 
       const summary = accordion.firstElementChild;
-      summary.addEventListener("click", cancelEvent);
+      summary.addEventListener('click', cancelEvent);
     });
   }
 }
