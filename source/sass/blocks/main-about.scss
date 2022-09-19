@@ -77,6 +77,8 @@
   content: "Подробнее";
   cursor: pointer;
   position: absolute;
+  // display: block;
+  // position: initial;
   bottom: 20px;
   width: 180px;
   color: $color-deep-sky-blue;
@@ -92,7 +94,7 @@
   &:hover,
   &:focus,
   &:focus-within {
-    outline: 2px solid $color-cerulean;
+    outline: 2px solid $color-black-pearl;
     outline-offset: 0.3em;
   }
 

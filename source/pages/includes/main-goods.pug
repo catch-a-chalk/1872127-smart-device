@@ -6,9 +6,9 @@
   ]
 
 section.main-goods
-  h3.for-tablet Smart Device предлагает следующие товары и услуги
-  h3.for-mobile Товары и услуги Smart Device
-  ._list
+  h2.for-tablet.for-responsive Smart Device предлагает следующие товары и услуги
+  h2.for-mobile.for-responsive Товары и услуги Smart Device
+  ._list.for-responsive
     each good, index in GOODS
       -
         const currentIndex = index + 1
@@ -22,7 +22,7 @@ section.main-goods
           source(type='image/jpg' media='(max-width: 1023px)' srcset=`${imgPath}-tablet@1x.jpg, ${imgPath}-tablet@2x.jpg 2x`)
           source(type='image/webp' srcset=`${imgPath}-desktop@1x.webp, ${imgPath}-desktop@2x.webp 2x`)
           img(src=`${imgPath}-desktop@1x.jpg` srcset=`${imgPath}-desktop@2x.jpg 2x` alt=`Фоновое изображение платы №${currentIndex}` width=350 height=650)
-        h4=good.title
+        h3=good.title
         ._void
           svg(width=5 height=10 aria-hidden='true' fill='#00B2FF')
             use(href='img/sprite_auto.svg#icon-vector')

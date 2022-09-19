@@ -11,7 +11,7 @@
     padding: 44px 25px 86px;
   }
 
-  h3 {
+  h2 {
     font-weight: 400;
     font-size: 36px;
     line-height: 51px;
@@ -50,19 +50,26 @@
   position: relative;
   background-color: $color-cerulean;
   aspect-ratio: 350 / 650;
-  // height: 650px;
   width: 100%;
 
   @media (max-width: ($vp-1024 - 1)) {
     aspect-ratio: 670 / 250;
-    // height: 250px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
     aspect-ratio: 270 / 250;
+    height: 250px;
   }
 
-  h4 {
+  &:hover,
+  &:focus,
+  &:focus-within {
+    picture {
+      opacity: 0.5;
+    }
+  }
+
+  h3 {
     color: $color-tory-blue;
     position: absolute;
     top: 20px;
