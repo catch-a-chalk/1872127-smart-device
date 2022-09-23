@@ -10,12 +10,12 @@
 
   @media (max-width: ($vp-1024 - 1)) {
     grid-column-gap: 30px;
-    padding: 0 calc(50vw - 370px) 125px;
+    padding: 0 calc(50vw - 370px) 80px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
     grid-column-gap: 0;
-    padding: 0 25px 129px;
+    padding: 0 25px 80px;
   }
 
   & picture {
@@ -59,27 +59,15 @@
     @media (max-width: ($vp-768 - 1)) {
       font-size: 14px;
       line-height: 18px;
-      margin-top: 14px;
+      margin-top: 16px;
       margin-bottom: 12px;
     }
   }
 }
 
 .main-about__trigger {
-  list-style: none;
-
-  &::-webkit-details-marker {
-    display: none;
-  }
-}
-
-.main-about__trigger::after {
-  content: "Подробнее";
   cursor: pointer;
-  position: absolute;
-  // display: block;
-  // position: initial;
-  bottom: 20px;
+  display: block;
   width: 180px;
   color: $color-deep-sky-blue;
   font-size: 14px;
@@ -90,25 +78,21 @@
   border: 1px solid $color-deep-sky-blue;
   border-radius: 3px;
   padding: 13px 15px;
+  margin-top: 45px;
 
   &:hover,
   &:focus,
   &:focus-within {
-    outline: 2px solid $color-black-pearl;
+    outline: 2px solid $color-deep-sky-blue;
     outline-offset: 0.3em;
   }
 
   @media (max-width: ($vp-1024 - 1)) {
-    bottom: -50px;
+    margin-top: 22px;
   }
 
   @media (max-width: ($vp-768 - 1)) {
     width: 160px;
     padding: 9px 15px;
   }
-}
-
-details[open] .main-about__trigger::after {
-  content: "Свернуть";
-  bottom: -50px;
 }

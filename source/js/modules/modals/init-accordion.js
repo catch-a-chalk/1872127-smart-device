@@ -1,31 +1,37 @@
-const accordions = document.querySelectorAll('.footer__accordion');
-
-const mobileQuery = '(max-width: 767px)';
+const accordions = document.querySelectorAll(".footer__accordion");
+const mobileQuery = "(max-width: 767px)";
 const mobileMedia = window.matchMedia(mobileQuery);
+let openedAccordionOnMobile = false;
+
+const triggerClosePrevHandlers = Array.from(
+  { length: accordions.length },
+  (_, index) => closePreviousAccordion(index)
+);
 
 /* Проверяем мобильный квери */
 
 updateMatches();
-mobileMedia.addEventListener('change', updateMatches);
+mobileMedia.addEventListener("change", updateMatches);
 
-function updateMatches() {
+export function updateMatches() {
   if (mobileMedia.matches) {
-    accordions.forEach((accordion) => {
-      /* По умолчанию открыты, но закрывает на мобильных
-       */
+    accordions.forEach((accordion, index) => {
       accordion.open = false;
-      /* Востанавливем функционал, если он был отменён */
+
       const summary = accordion.firstElementChild;
-      summary.removeEventListener('click', cancelEvent);
+      summary.removeEventListener("click", cancelEvent);
+      summary.addEventListener("click", triggerClosePrevHandlers[index]);
     });
   } else {
-    accordions.forEach((accordion) => {
+    openedAccordionOnMobile = false;
+    accordions.forEach((accordion, index) => {
       /* По умолчанию открыты, но закрывает на мобильных
        */
       accordion.open = true;
 
       const summary = accordion.firstElementChild;
-      summary.addEventListener('click', cancelEvent);
+      summary.removeEventListener("click", triggerClosePrevHandlers[index]);
+      summary.addEventListener("click", cancelEvent);
     });
   }
 }
@@ -34,4 +40,14 @@ function cancelEvent(evt) {
   evt.preventDefault();
 }
 
-export {updateMatches};
+function closePreviousAccordion(index) {
+  return () => {
+    if (
+      openedAccordionOnMobile !== false &&
+      openedAccordionOnMobile !== index
+    ) {
+      accordions[openedAccordionOnMobile].open = false;
+    }
+    openedAccordionOnMobile = index;
+  };
+}

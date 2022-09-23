@@ -214,6 +214,7 @@
   border: none;
   border-radius: 3px;
   padding: 13px 25px;
+  order: 1;
 }
 
 .modal__checkbox {
@@ -221,6 +222,7 @@
   justify-content: flex-start;
   align-items: flex-end;
   margin-left: 9px;
+  order: 2;
 
   @media (max-width: ($vp-1024 - 1)) {
     margin-left: 0;

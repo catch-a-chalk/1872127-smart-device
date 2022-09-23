@@ -1,8 +1,7 @@
 // Можно добавить класс is-active
 .modal.modal--preload(data-modal='feedback')
-    .modal__wrapper
+    .modal__wrapper(data-close-modal='')
     .modal__block
-        .modal__overlay(data-close-modal='')
         .modal__content
             h3 Закажите звонок
             p.modal__description Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
@@ -19,9 +18,9 @@
             p
                 label.visually-hidden(for='modal-text') Ваш вопрос
                 textarea#modal-text(placeholder='Ваш вопрос' required='')
-            button.modal__form-btn.btn-wide(type='submit') Отправить
             .modal__checkbox
                 label(for='modal-subscribe')
                     input#modal-subscribe.visually-hidden(checked='checked' type='checkbox' value='checked' required='')
                     span
                     small Я согласен на обработку персональных данных
+            button.modal__form-btn.btn-wide(type='submit') Отправить

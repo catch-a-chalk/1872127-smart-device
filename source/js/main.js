@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {updateMatches} from './modules/modals/init-accordion';
 import {initMask} from './modules/modals/init-mask';
+import {checkSection} from './modules/modals/check-section';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -15,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   updateMatches();
   initMask();
+  checkSection();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

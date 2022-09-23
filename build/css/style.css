@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -626,7 +624,7 @@ button,
 }
 
 .for-tablet {
-  display: inline;
+  display: inline-block;
   word-spacing: -2px;
 }
 
@@ -972,6 +970,9 @@ button,
   border: none;
   border-radius: 3px;
   padding: 13px 25px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .modal__checkbox {
@@ -985,6 +986,9 @@ button,
   -ms-flex-align: end;
   align-items: flex-end;
   margin-left: 9px;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 .modal__checkbox label {
@@ -1262,18 +1266,8 @@ button,
 }
 
 .main-about__trigger {
-  list-style: none;
-}
-
-.main-about__trigger::-webkit-details-marker {
-  display: none;
-}
-
-.main-about__trigger::after {
-  content: "Подробнее";
   cursor: pointer;
-  position: absolute;
-  bottom: 20px;
+  display: block;
   width: 180px;
   color: #00b2ff;
   font-size: 14px;
@@ -1284,31 +1278,27 @@ button,
   border: 1px solid #00b2ff;
   border-radius: 3px;
   padding: 13px 15px;
+  margin-top: 45px;
 }
 
-.main-about__trigger::after:hover,
-.main-about__trigger::after:focus,
-.main-about__trigger::after:focus-within {
-  outline: 2px solid #041827;
+.main-about__trigger:hover,
+.main-about__trigger:focus,
+.main-about__trigger:focus-within {
+  outline: 2px solid #00b2ff;
   outline-offset: 0.3em;
-}
-
-details[open] .main-about__trigger::after {
-  content: "Свернуть";
-  bottom: -50px;
 }
 
 .main-goods {
   color: #f2f5f6;
   background-color: #041827;
-  padding: 66px calc(50vw - 610px) 140px;
+  padding: 66px calc(50vw - 660px) 140px;
 }
 
 .main-goods h2 {
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  margin: 0 0 37px 0;
+  margin: 0 0 2px 0;
 }
 
 .main-goods__list {
@@ -1339,7 +1329,7 @@ details[open] .main-about__trigger::after {
 .main-goods__item h3 {
   color: #f2f5f6;
   position: absolute;
-  top: 20px;
+  top: 26px;
   left: 40px;
   font-weight: 400;
   font-size: 20px;
@@ -1495,6 +1485,9 @@ form {
   border-radius: 3px;
   margin-top: 16px;
   padding: 13px 25px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .main-form__checkbox {
@@ -1508,6 +1501,9 @@ form {
   -ms-flex-align: end;
   align-items: flex-end;
   margin-left: 13px;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 .main-form__checkbox label {
@@ -1826,6 +1822,10 @@ form {
     display: none;
   }
 
+  .header__item svg {
+    margin-right: 5px;
+  }
+
   .header__btn {
     display: none;
   }
@@ -1877,7 +1877,7 @@ form {
 
   .main-about__wrapper {
     grid-column-gap: 30px;
-    padding: 0 calc(50vw - 370px) 125px;
+    padding: 0 calc(50vw - 370px) 80px;
   }
 
   .main-about__description h3 {
@@ -1888,12 +1888,12 @@ form {
     margin-top: 9px;
   }
 
-  .main-about__trigger::after {
-    bottom: -50px;
+  .main-about__trigger {
+    margin-top: 22px;
   }
 
   .main-goods {
-    padding: 56px calc(50vw - 335px) 75px;
+    padding: 56px calc(50vw - 365px) 75px;
   }
 
   .main-goods__list {
@@ -1908,7 +1908,7 @@ form {
   }
 
   .main-goods__item h3 {
-    top: 10px;
+    top: 17px;
     left: 45px;
   }
 
@@ -1944,8 +1944,8 @@ form {
   }
 
   .footer__wrapper {
-    -ms-grid-columns: 10fr 9fr;
-    grid-template-columns: 10fr 9fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 50px calc(50vw - 365px);
   }
 
@@ -1961,14 +1961,13 @@ form {
   }
 
   .footer__logo {
-    margin-bottom: 13px;
+    margin-bottom: 5px;
   }
 
   .footer__social {
     position: relative;
     -ms-flex-item-align: baseline;
     align-self: baseline;
-    top: 11px;
     left: 11px;
   }
 
@@ -1983,6 +1982,10 @@ form {
   .footer__list--info {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .footer__link {
+    width: 255px;
   }
 
   .footer__link:nth-of-type(n) {
@@ -2103,7 +2106,7 @@ form {
 
   .main-about__wrapper {
     grid-column-gap: 0;
-    padding: 0 25px 129px;
+    padding: 0 25px 80px;
   }
 
   .main-about__wrapper picture {
@@ -2118,11 +2121,11 @@ form {
   .main-about__description p {
     font-size: 14px;
     line-height: 18px;
-    margin-top: 14px;
+    margin-top: 16px;
     margin-bottom: 12px;
   }
 
-  .main-about__trigger::after {
+  .main-about__trigger {
     width: 160px;
     padding: 9px 15px;
   }
@@ -2149,7 +2152,7 @@ form {
   }
 
   .main-goods__item h3 {
-    top: 3px;
+    top: 8px;
     left: 30px;
     font-weight: 400;
     font-size: 18px;
@@ -2199,6 +2202,7 @@ form {
 
   .footer__wrapper {
     padding: 35px 0;
+    gap: 0;
   }
 
   .footer__block {
@@ -2209,9 +2213,12 @@ form {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-bottom: 19px;
   }
 
   .footer__logo {
+    position: relative;
+    right: 8px;
     margin-bottom: 0;
   }
 
@@ -2219,8 +2226,7 @@ form {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
-    margin-bottom: 27px;
-    top: 0;
+    margin-bottom: -5px;
     left: 0;
   }
 
@@ -2251,9 +2257,9 @@ form {
     -ms-flex-align: center;
     align-items: center;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 17px;
+    top: 3px;
+    right: 1px;
+    width: 15px;
     height: 2px;
     background-color: #ffffff;
     margin: 25px;

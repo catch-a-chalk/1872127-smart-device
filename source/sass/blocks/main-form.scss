@@ -142,6 +142,7 @@ form {
   border-radius: 3px;
   margin-top: 16px;
   padding: 13px 25px;
+  order: 1;
 
   @media (max-width: ($vp-768 - 1)) {
     width: 270px;
@@ -154,6 +155,7 @@ form {
   justify-content: flex-start;
   align-items: flex-end;
   margin-left: 13px;
+  order: 2;
 
   @media (max-width: ($vp-1024 - 1)) {
     margin-left: 0;

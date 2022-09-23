@@ -93,6 +93,10 @@
 
   svg {
     margin-right: 8px;
+
+    @media (max-width: ($vp-1024 - 1)) {
+      margin-right: 5px;
+    }
   }
 }
 

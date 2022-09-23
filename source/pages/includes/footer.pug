@@ -21,7 +21,7 @@ footer.footer.for-responsive
             svg.footer__social-logo(width='31' height='31' role='img' aria-label='logo-vk' fill='#F8FDFF')
               title#logo-vk Логотип VK
               use(href='img/sprite_auto.svg#logo-vk')
-    details.footer__accordion(open='')
+    details(open).footer__accordion
       summary.footer__trigger
         span Разделы сайта
       // Можно добавить класс footer__toggle--closed
@@ -40,7 +40,7 @@ footer.footer.for-responsive
           a(href='#') Доставка
         li.footer__link
           a(href='#') Контакты
-    details.footer__accordion(open='')
+    details(open).footer__accordion
       summary.footer__trigger
         span Наш офис
       // Можно добавить класс footer__toggle--closed
