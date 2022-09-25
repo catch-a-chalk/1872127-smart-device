@@ -29,10 +29,10 @@
 
 .main-goods__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 350px);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  justify-items: start;
-  gap: 20px;
+  justify-items: center;
+  gap: 80px;
   margin-top: 53px;
 
   @media (max-width: ($vp-1024 - 1)) {
@@ -50,7 +50,8 @@
   position: relative;
   background-color: $color-cerulean;
   aspect-ratio: 350 / 650;
-  width: 100%;
+  max-width: 350px;
+  max-height: 650px;
 
   @media (max-width: ($vp-1024 - 1)) {
     aspect-ratio: 670 / 250;

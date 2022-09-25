@@ -132,3 +132,10 @@ button,
 [type="submit"] {
   appearance: none;
 }
+
+details > summary {
+  list-style: none; // Убираем стандартный маркер Firefox
+  &::-webkit-details-marker {
+    display: none; // Для старых Chrome и Safari
+  }
+}

@@ -13,10 +13,10 @@ section.main-form.for-responsive#consult
                     input#form-name(type='text' name='form-name' placeholder='Имя' required='' autocomplete='name')
                 p
                     label.visually-hidden(for='form-tel') Телефон
-                    input#form-tel.phone(inputmode='decimal' pattern='\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}' type='tel' name='form-tel' placeholder='Телефон' required='' autocomplete='tel')
+                    input#form-tel.phone(inputmode='decimal' pattern='\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}' type='tel' name='form-tel' placeholder='Телефон' required='' autocomplete='tel' minlength='16')
                 p
                     label.visually-hidden(for='form-text') Ваш вопрос
-                    textarea#form-text(placeholder='Ваш вопрос' required='')
+                    textarea#form-text(placeholder='Ваш вопрос')
                 .main-form__checkbox
                     label(for='form-subscribe')
                         input#form-subscribe.visually-hidden(checked='checked' type='checkbox' value='checked' required='')

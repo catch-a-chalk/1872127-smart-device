@@ -565,6 +565,14 @@ button,
   appearance: none;
 }
 
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 .wrapper {
   position: relative;
   display: -webkit-box;
@@ -1171,7 +1179,8 @@ button,
   margin: 120px auto;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(585px, 1fr));
+  -ms-grid-columns: (minmax(100px, 585px))[2];
+  grid-template-columns: repeat(2, minmax(100px, 585px));
   gap: 30px;
   padding: 0 calc(50vw - 660px);
 }
@@ -1304,12 +1313,13 @@ button,
 .main-goods__list {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 350px);
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  justify-items: start;
-  gap: 20px;
+  justify-items: center;
+  gap: 80px;
   margin-top: 53px;
 }
 
@@ -1317,7 +1327,8 @@ button,
   position: relative;
   background-color: #026593;
   aspect-ratio: 350/650;
-  width: 100%;
+  max-width: 350px;
+  max-height: 650px;
 }
 
 .main-goods__item:hover picture,
@@ -1561,9 +1572,6 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   cursor: pointer;
   position: relative;
   text-transform: uppercase;
@@ -1586,6 +1594,10 @@ form {
 .footer__trigger:focus {
   border: none;
   outline: none;
+}
+
+.footer__trigger::-webkit-details-marker {
+  display: none;
 }
 
 .footer h3 {
@@ -1636,6 +1648,10 @@ form {
 .footer__item:focus-within {
   outline: 2px solid #00b2ff;
   outline-offset: 0.3em;
+}
+
+.footer details > summary {
+  list-style: none;
 }
 
 .footer__wrapper {
@@ -1722,6 +1738,12 @@ form {
 .footer__list--info {
   grid-template-columns: repeat(auto-fit, 220px);
   grid-column-gap: 30px;
+}
+
+.footer__link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .footer__link:nth-of-type(n) {

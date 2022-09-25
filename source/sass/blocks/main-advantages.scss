@@ -6,7 +6,7 @@
 .main-advantages__list {
   margin: 120px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(585px, 1fr));
+  grid-template-columns: repeat(2, minmax(100px, 585px));
   gap: 30px;
   padding: 0 calc(50vw - 660px);
 
