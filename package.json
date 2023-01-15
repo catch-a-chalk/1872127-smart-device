@@ -12,11 +12,13 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig & npm run stylelint & eslint source/js/",
+    "deploy": "gh-pages -d dist",
     "build": "cross-env NODE_ENV=production gulp build & gulp imagemin",
     "start": "cross-env NODE_ENV=development gulp start",
     "webp": "gulp webp",
     "imagemin": "gulp imagemin"
   },
+  "homepage": "https://catch-a-chalk.github.io/1872127-smart-device/",
   "editorconfig-cli": [
     "*.json",
     "*.js",
@@ -61,6 +63,7 @@
     "node": ">=16.15.1"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "imask": "^6.4.3-alpha.0"
   }
 }
